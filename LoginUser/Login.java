@@ -111,7 +111,9 @@ public class Login extends JFrame{
           String con = contrasena.getText();
           
           if (us.equals(usuariore) && con.equals(contrasenare)) {
-            JOptionPane.showMessageDialog(null,"¡Bienvenido " +usuariore + "!");
+                                    AccesoAc accesoAc = new AccesoAc();
+                        accesoAc.setVisible(true);
+                        dispose();
         } else {
             JOptionPane.showMessageDialog(null,"El usuario y/o contraseña son incorrectos.");
         }
