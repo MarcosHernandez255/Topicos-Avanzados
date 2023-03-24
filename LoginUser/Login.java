@@ -22,7 +22,7 @@ public class Login extends JFrame{
     private final JTextArea usuario;
     private final JPasswordField contrasena;
     private final JButton acceder;
-    private final JButton registrar;
+   // private final JButton registrar;
     
     
     public static void main(String[] args) {
@@ -59,14 +59,14 @@ public class Login extends JFrame{
         acceder = new JButton("Acceder");
         add(acceder);
 
-        registrar = new JButton("Registrar");
-        add(registrar);
+        //registrar = new JButton("Registrar");
+        //add(registrar);
         
         acceder.addActionListener(new HandlerAcceder());
-        registrar.addActionListener(new HandlerRegistrar());
+        //registrar.addActionListener(new HandlerRegistrar());
         }  
     
-    private class HandlerRegistrar implements ActionListener {
+   /* private class HandlerRegistrar implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent event) {
@@ -101,7 +101,7 @@ public class Login extends JFrame{
         
     }
     
-}
+}*/
         
     private class HandlerAcceder implements ActionListener {
 
@@ -109,8 +109,10 @@ public class Login extends JFrame{
         public void actionPerformed(ActionEvent event) {
           String us = usuario.getText();
           String con = contrasena.getText();
+          String usuarioID = "Marcos";
+          String contraseñaID = "1234";
           
-          if (us.equals(usuariore) && con.equals(contrasenare)) {
+          if (us.equals(usuarioID/*usuariore*/) && con.equals(contraseñaID/*contrasenare*/)) {
                                     AccesoAc accesoAc = new AccesoAc();
                         accesoAc.setVisible(true);
                         dispose();
